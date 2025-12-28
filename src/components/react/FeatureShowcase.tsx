@@ -29,16 +29,16 @@ const features = [
   },
   {
     // icon: BarChart3,
-    title: 'Personal Fitness and Training',
-    description: '-- blurb for fitness stuff --',
+    title: 'Adult Programs',
+    description: '-- blurb for Adult programs --',
     image: fitnessImg,
   },
-  {
-    // icon: Shield,
-    title: 'Grappling',
-    description: 'Brazilian Ju Jitsu, Wrestling and Grappling',
-    image: grapplingImg,
-  },
+  // {
+  //   // icon: Shield,
+  //   title: 'Grappling',
+  //   description: 'Brazilian Ju Jitsu, Wrestling and Grappling',
+  //   image: grapplingImg,
+  // },
   {
     // icon: Headphones,
     title: 'Child Programs',
