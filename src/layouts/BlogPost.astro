@@ -1,15 +1,62 @@
 ---
 import BaseLayout from "../layouts//BaseLayout.astro";
+import SITE from "../config/site";
+import { Image } from 'astro:assets';
 const { frontmatter } = Astro.props;
+import { SITE } from '../config/site';
+console.log("AAAAAAAHHHHHHHHHHHHH");
+console.log(Astro.site);
+const image_url = "/master_ken/" + frontmatter.image;
+
 ---
-
 <BaseLayout>
-  <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
-  <p><em>{frontmatter.description}</em></p>
-  <p>Written by: {frontmatter.author}</p>
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+    <!-- <p>{frontmatter.image}</p> -->
+    <section class="relative h-[70vh] min-h-[500px] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <!-- <Image 
+        src={image_url}
+        alt="Professional documentation and resources"
+        class="w-full h-full object-contain"
+        width={2070}
+        height={1380}
+      /> -->
+      <img class="w-full h-full object-contain" src={image_url}>
+      <div class="absolute inset-0 bg-linear-to-r from-stone-900/70 via-stone-900/50 to-stone-900/60"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)]"></div>
+    </div>
 
-  <slot />
+    <div class="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        
+        <h2 class="text-4xl md:text-5xl font-bold text-slate-200 mb-4">
+        {frontmatter.title}
+        <!-- Frequently Asked <span class="gradient-text">Questions</span> -->
+        </h2>
+        
+        <p class="text-xl md:text-2xl text-slate-200 mb-8 max-w-3xl mx-auto leading-relaxed animate-fadeInUp" style="animation-delay: 0.1s">
+          {frontmatter.description}
+        </p>
+
+      </div>
+    </div>
+
+  </section>
+
+  <div class="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <br>
+      Posted:
+      <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
+      
+      <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+      
+      
+    </div>
+    <p class="text-justify">
+        <slot />
+    </p>
+  </div>
+    
 </BaseLayout>
 
 <!-- <div class={`${index % 2 === 1 ? 'lg:col-start-2' : ''} animate-fadeInUp`}>

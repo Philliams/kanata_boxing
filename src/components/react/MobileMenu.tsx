@@ -31,13 +31,13 @@ export default function MobileMenu() {
             ))}            <div className="pt-4">
               <Dialog.Close asChild>
                 <a
-                  href="/rfq"
+                  href="/master_ken/contact"
                   className="block text-center px-6 py-3 text-sm font-semibold text-white rounded-lg shadow-md transition-all"
                   style={{ background: 'linear-gradient(to right, #9f3434, #8d7051)' }}
                   onMouseEnter={(e) => e.currentTarget.style.background = 'linear-gradient(to right, #7a2828, #6f5840)'}
                   onMouseLeave={(e) => e.currentTarget.style.background = 'linear-gradient(to right, #9f3434, #8d7051)'}
                 >
-                  Request Quote
+                  Contact
                 </a>
               </Dialog.Close>
             </div>

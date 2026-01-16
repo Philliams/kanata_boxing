@@ -3,8 +3,6 @@ import { motion } from 'motion/react';
 // const items = [{title: "AH", image: {src: "dummy"}}];
 
 export default function FeatureShowcase(items) {
-  console.log("BLOG CARD");
-  console.log(items.items);
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {items.items.map((blog_content, index) => (

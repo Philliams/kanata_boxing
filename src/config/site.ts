@@ -14,6 +14,11 @@ export const NAVIGATION = [
   { name: 'Blog', href: '/master_ken/blog' }
 ] as const;
 
+export const MARTIAL_ARTS = [
+    { name: 'Taekwondo', href: '/master_ken/martial_arts/taekwondo' },
+    { name: 'Boxing', href: '/master_ken/martial_arts/boxing' }
+] as const;
+
 export const SOCIAL_LINKS = {
   linkedin: 'https://linkedin.com/company/yourcompany',
   twitter: 'https://twitter.com/yourcompany',
