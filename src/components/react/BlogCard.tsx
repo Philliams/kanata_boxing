@@ -19,7 +19,7 @@ export default function FeatureShowcase(items) {
           <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
             {/* Image */}
             <div className="relative h-64 overflow-hidden">              <motion.img
-                src={blog_content.frontmatter.image}
+                src={"/master_ken/" + blog_content.frontmatter.image}
                 alt={blog_content.frontmatter.title}
                 className="w-full h-full object-cover"
                 loading="lazy"
