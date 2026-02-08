@@ -9,6 +9,7 @@ console.log(Astro.site);
 const image_url = "/master_ken/" + frontmatter.hero;
 
 ---
+
 <BaseLayout>
     <!-- <p>{frontmatter.image}</p> -->
     <section class="relative h-[70vh] min-h-[500px] flex items-center overflow-hidden">
@@ -42,6 +43,17 @@ const image_url = "/master_ken/" + frontmatter.hero;
   </section>
 
   <div class="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
+    <style is:global>
+      ol {
+        list-style-type: value;
+        margin-left: 1.5em; /* Add some margin for indentation */
+      }
+
+      ul {
+        list-style-type: disc;
+        margin-left: 1.5em; /* Add some margin for indentation */
+      }
+    </style>
     <div class="max-w-4xl mx-auto text-center">
       <br>
       Posted:
