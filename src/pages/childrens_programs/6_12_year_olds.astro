@@ -1,11 +1,11 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Section from '../components/ui/Section.astro';
-import Card from '../components/ui/Card.astro';
-import Button from '../components/ui/Button.astro';
-import CapabilityAccordion from '../components/react/CapabilityAccordion';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/ui/Section.astro';
+import Card from '../../components/ui/Card.astro';
+import Button from '../../components/ui/Button.astro';
+import CapabilityAccordion from '../../components/react/CapabilityAccordion';
 import { Image } from 'astro:assets';
-import ImageReveal from '../components/react/ImageReveal';
+import ImageReveal from '../../components/react/ImageReveal';
 
 import taekwondoImg from '@assets/kick-1.jpg';
 import manufacturingImg from '@assets/hapkido-2.jpg';
@@ -13,7 +13,7 @@ import transportationImg from '@assets/photo-1601584115197-04ecc0da31d7.jpg';
 import supplyChainImg from '@assets/photo-1460925895917-afdab827c52f.jpg';
 import valueAddedServicesImg from '@assets/photo-1558618666-fcd25c85cd64.jpg';
 import technologyIntegrationImg from '@assets/photo-1558494949-ef010cbdcc31.jpg';
-import heroBgImg from '@assets/childrens_program.png';
+import heroBgImg from '@assets/6_12_bubble.png';
 import ctaBgImg from '@assets/photo-1553413077-190dd305871c.jpg';
 
 const capabilities = [
@@ -84,19 +84,6 @@ const capabilities = [
   }
 </style>
 
-    <div>
-      <ul>
-        <li>
-          <a href="/master_ken/childrens_programs/4_6_year_olds">4-6</a>
-        </li>
-        <li>
-            <a href="/master_ken/childrens_programs/6_12_year_olds">6-12</a>
-        </li>
-      
-      </ul>
-      
-    </div>
-
   <!-- Process Section -->
   <Section background="white">
     <div class="text-center mb-16">
@@ -111,8 +98,6 @@ const capabilities = [
         -- Put some sort of blurb for how the training process works --
       </p>
     </div>
-
-    
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {[
