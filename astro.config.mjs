@@ -10,5 +10,5 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   site: 'https://philliams.github.io',
-  base: '/master_ken',
+  base: '/kanata_boxing',
 });

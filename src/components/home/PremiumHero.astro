@@ -1,66 +1,41 @@
 ---
 import { Image } from 'astro:assets';
 import Button from '../ui/Button.astro';
-import heroBgImg from '@assets/kid_program-4.jpg';
-import logoImg from '@assets/logo.png';
+import heroBgImg from '@assets/boxing_background.jpeg';
+import logoImg from '@assets/boxing_logo.png';
 
 ---
 
 <section class="relative h-screen min-h-[600px] flex items-center overflow-hidden">  <!-- Background Image with Overlay -->
   <div class="absolute inset-0">
-    <Image 
-      src={heroBgImg}
-      alt="Traditional Martial Arts"
-      class="w-full h-full object-cover"
-      width={2070}
-      height={1380}
-      decoding="async"
-      fetchpriority="high"
-    />
-    <div class="absolute inset-0 bg-gradient-to-r from-stone-900/50 via-stone-900/30 to-stone-900/20"></div>
+      <Image 
+        src={heroBgImg}
+        alt="Traditional Martial Arts"
+        class="w-full h-full object-cover"
+        width={2070}
+        height={1380}
+        decoding="async"
+        fetchpriority="high"
+        style="z-index: -10;"
+      />
   </div>
-  <!-- Content -->
-  <div class="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-4xl" style="margin-top: 30%;">
-      <!-- <div class="inline-flex items-center px-4 py-2 mb-6 bg-gradient-burgundy text-white text-sm font-semibold rounded-full shadow-lg">
-        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
-        </svg>
-        Martial Arts and Personal Fitness
-      </div> -->
+  <div class="absolute inset-0 flex justify-center">
+      <Image 
+        src={logoImg}
+        alt="Traditional Martial Arts"
+        class="w-4/5 h-full object-contain inset-2"
+        decoding="async"
+        fetchpriority="high"
+        style="z-index:10;"
+      />
 
-      <!-- <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-        Ken Blackburn's <br> Martial Arts
-        <span class="hero-gradient-text block mt-2">
-        <hr>
-        <p class="text-xl md:text-2xl text-slate-200 mb-8 max-w-2xl leading-relaxed">
-          Taekwondo
-          <Image src={logoImg} alt="A small icon" class="w-10 h-10 object-contain" width={100} height={100} style={{ display: 'inline-block', verticalAlign: 'middle' }} />
-          Hapkido
-          <Image src={logoImg} alt="A small icon" class="w-10 h-10 object-contain" width={100} height={100} style={{ display: 'inline-block', verticalAlign: 'middle' }} />
-          Boxing
-        </p>
-      </h1> -->
-      
-      <p class="text-xl md:text-2xl text-slate-200 mb-8 max-w-2xl leading-relaxed">
-        Fulfill your full potential in this dynamic program with proven results.
-        In a fun-filled environment where class sizes are capped at 4 and priced to be budget friendly.
-        <a class="red-link" href="/master_ken/contact">Click here to start your personal journey now</a>
-      </p>
-      
-      <div class="flex flex-col sm:flex-row gap-4 mb-12">
-        <Button href="/master_ken/contact" size="lg" class="bg-burgundy! hover:bg-burgundy-dark! text-white! shadow-2xl!">
-          Contact
-        </Button>
-        <Button href="/master_ken/adult_programs" size="lg" class="bg-burgundy! hover:bg-burgundy-dark! text-white! shadow-2xl!">
-          Adult Programs
-        </Button>
-        <Button href="/master_ken/child_programs" size="lg" class="bg-burgundy! hover:bg-burgundy-dark! text-white! shadow-2xl!">
-          Children's Programs
-        </Button>
-      </div>      <!-- Quick Stats -->
-      </div>
-    </div>
+  </div>
+
+  <!-- Content -->
+   <div class="absolute inset-0 flex justify-center w-full">
+    <p class="text-center md:text-3xl text-slate-200 mb-8 min-w-2xl max-w-3xl absolute bottom-1/6">
+      Kanata and Stittsville's source for boxing
+    </p>
   </div>
   <!-- Scroll indicator -->
   <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">

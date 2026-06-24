@@ -7,10 +7,9 @@ export default function MobileMenu() {
     <Dialog.Root>
       <Dialog.Trigger asChild>
           <button
-          className="p-2 text-slate-700 hover:bg-slate-100 rounded-lg transition-colors flex items-center"
+          className="p-2 text-slate-300 hover:bg-slate-100 rounded-lg transition-colors flex items-center"
           aria-label="Toggle menu"
         >
-          Martial Arts
           <Menu className="h-6 w-6" />
           
         </button>
