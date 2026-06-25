@@ -1,29 +1,9 @@
 import { motion } from 'motion/react';
-// import { Warehouse, Truck, Package, BarChart3, Shield, Headphones } from 'lucide-react';
-
-import taekwondoImg from '@assets/tkd_bubble.png';
-import hapkidoImg from '@assets/hapkido-1.png';
 import boxingImg from '@assets/boxing_splash.png';
-import fitnessImg from '@assets/adult_program_bubble.png';
-import grapplingImg from '@assets/grappling-1.jpg';
-import childprogramImg from '@assets/children_program_bubble.png';
+import childprogramImg from '@assets/blog_benefits_bubble.png';
 
 const features = [
-  {
-    // icon: Warehouse,
-    title: '',
-    description: '',
-    image: taekwondoImg,
-    link: '/master_ken/martial_arts/taekwondo'
-  },
-  {
-    // icon: Truck,
-    title: '',
-    description: '',
-    image: hapkidoImg,
-    link: ''
-  },
-  {
+    {
     // icon: Package,
     title: '',
     description: '',
@@ -31,30 +11,17 @@ const features = [
     link: '/master_ken/martial_arts/boxing'
   },
   {
-    // icon: BarChart3,
-    title: '',
-    description: '',
-    image: fitnessImg,
-    link: '/master_ken/adult_programs'
-  },
-  // {
-  //   // icon: Shield,
-  //   title: 'Grappling',
-  //   description: 'Brazilian Ju Jitsu, Wrestling and Grappling',
-  //   image: grapplingImg,
-  // },
-  {
     // icon: Headphones,
     title: '',
     description: '',
     image: childprogramImg,
     link: '/master_ken/child_programs'
-  },
+  }
 ];
 
 export default function FeatureShowcase() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8">
       {features.map((feature, index) => (
         <motion.div
           key={feature.title}
@@ -67,7 +34,7 @@ export default function FeatureShowcase() {
           <a href={feature.link}>
           <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
             {/* Image */}
-            <div className="relative h-64 overflow-hidden">              <motion.img
+            <div className="relative h-128 overflow-hidden">              <motion.img
                 src={feature.image.src}
                 alt={feature.title}
                 className="w-full h-full object-cover"
